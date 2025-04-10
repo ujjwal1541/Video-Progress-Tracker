@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Video Progress Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Video Progress Tracker</h1>
+        
+        <div class="video-container">
+            <video id="lecture-video" controls>
+                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <div class="progress-section">
+                <div class="progress-info">
+                    <div class="progress-label">
+                        <span>Progress:</span>
+                        <span id="progress-percentage">0%</span>
+                    </div>
+                </div>
+                
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div id="unique-progress" class="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <div class="interval-visualization">
+                    <div id="video-timeline" class="timeline"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <h2>Viewing Statistics</h2>
+            <div class="stat-item">
+                <span>Total Video Duration:</span>
+                <span id="video-duration">0:00</span>
+            </div>
+            <div class="stat-item">
+                <span>Unique Seconds Watched:</span>
+                <span id="unique-watched">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Current Position:</span>
+                <span id="current-position">0:00</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="progress-tracker.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
